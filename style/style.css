@@ -39,8 +39,7 @@ body{
 }
 
 .menu{
-    display: flex;
-    gap: 15px;
+    position: relative;
 }
 
 .menu a{
@@ -50,6 +49,14 @@ body{
 
 .menu a:hover{
     transform: scale(1.10);
+}
+
+.lista-header{
+    display: flex;
+    gap: 15px;
+}
+.hamburguer{
+    display: none;
 }
 
 .banner{
@@ -74,6 +81,7 @@ body{
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+    justify-content: center;
     width: 90%;
     margin-bottom: 20px;
 }
@@ -107,4 +115,26 @@ footer{
     text-align: center;
     padding: 20px 0;
     margin-top: 0;
+}
+
+@media screen and (max-width:703px) {
+    .lista-header{
+        display: none;
+        flex-direction: column;
+        background-color: #9c9c9c;
+        padding: 10px;
+        position: absolute;
+        top: -40px;
+        left: -76px;
+    }
+    .hamburguer{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media screen and (width <=320px){
+    .navbar h1{
+        font-size: 0.2em;
+    }
 }
